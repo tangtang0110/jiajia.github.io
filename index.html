@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汤汤 | 个人主页</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei",
+                         sans-serif;
+            background: #f5f7f2;
+            color: #28352f;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 16px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 760px;
+            background: #ffffff;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(40, 60, 45, 0.08);
+        }
+
+        /* 顶部背景 */
+        .header {
+            background: linear-gradient(
+                135deg, #c8e6d5, #e5f0dc
+            );
+            padding: 55px 30px 65px;
+            text-align: center;
+            position: relative;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .header h1 {
+            font-size: 38px;
+            letter-spacing: 5px;
+            margin-bottom: 12px;
+        }
+
+        .header p {
+            font-size: 15px;
+            color: #53685b;
+            letter-spacing: 2px;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 7px 18px;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.65);
+            color: #496b55;
+            font-size: 12px;
+        }
+
+        /* 主体内容 */
+        .content {
+            padding: 38px 45px 45px;
+        }
+
+        .section-title {
+            font-size: 19px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 5px;
+            height: 21px;
+            background: #83b99a;
+            border-radius: 5px;
+        }
+
+        .intro {
+            line-height: 2;
+            color: #68766e;
+            font-size: 15px;
+            margin-bottom: 35px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .info-card {
+            padding: 23px 20px;
+            border-radius: 17px;
+            background: #f5f8f4;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(60,90,65,0.08);
+        }
+
+        .info-icon {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .info-label {
+            color: #91a096;
+            font-size: 12px;
+            margin-bottom: 9px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            font-weight: 600;
+            color: #35483c;
+            line-height: 1.6;
+            word-break: break-word;
+        }
+
+        /* 底部 */
+        .footer {
+            text-align: center;
+            padding: 22px;
+            border-top: 1px solid #eef2ed;
+            color: #a0aaa2;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .footer span {
+            color: #83b99a;
+        }
+
+        /* 手机适配 */
+        @media (max-width: 520px) {
+            body {
+                padding: 16px 12px;
+            }
+
+            .header {
+                padding: 42px 20px 48px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .content {
+                padding: 30px 22px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .info-card {
+                padding: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- 个人主页头部 -->
+        <header class="header">
+            <div class="avatar">🌱</div>
+            <h1>汤汤</h1>
+            <p>我的地球 online 日记</p>
+            <div class="tag">✨ 认真生活，随心探索</div>
+        </header>
+
+        <!-- 个人信息 -->
+        <main class="content">
+
+            <h2 class="section-title">关于我</h2>
+
+            <p class="intro">
+                欢迎来到我的个人主页！<br>
+                这里记录我的学习、生活与日常点滴。
+                世界很大，生活很有趣，
+                正在努力解锁更多有意思的体验。
+            </p>
+
+            <h2 class="section-title">个人档案</h2>
+
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <div class="info-icon">🎓</div>
+                    <div class="info-label">教育背景</div>
+                    <div class="info-value">研究生</div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🎨</div>
+                    <div class="info-label">兴趣爱好</div>
+                    <div class="info-value">琴棋书画样样不精通</div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <div class="info-label">联系方式</div>
+                    <div class="info-value">110</div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🌍</div>
+                    <div class="info-label">人生状态</div>
+                    <div class="info-value">地球 Online 玩家</div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            © 2026 汤汤的个人主页 · Made with <span>♥</span>
+        </footer>
+
+    </div>
+
+</body>
+</html>
